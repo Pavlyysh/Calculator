@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        input, select, button { padding: 10px; margin: 5px; width: 100%; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 4px; }
+        .error { margin-top: 20px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Калькулятор</h2>
+        <form method="post">
+            <input type="number" name="num1" placeholder="Введите первое число" required>
+            <input type="number" name="num2" placeholder="Введите второе число" required>
+            
+            <select name="operation">
+                <option value="add">Сложение (+)</option>
+                <option value="subtract">Вычитание (-)</option>
+                <option value="multiply">Умножение (*)</option>
+                <option value="divide">Деление (/)</option>
+            </select>
+            
+            <button type="submit">Вычислить</button>
+        </form>
+        
+        {{if .Error}}
+            <div class="error">{{.Error}}</div>
+        {{end}}
+        
+        {{if .Result}}
+            <div class="result">Результат: {{.Result}}</div>
+        {{end}}
+    </div>
+</body>
+</html>
