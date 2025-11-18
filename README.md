@@ -1,5 +1,7 @@
 # Простой калькулятор на Go
 
+<img width="637" height="361" alt="image" src="https://github.com/user-attachments/assets/f9d406dd-6b73-44ed-b23e-b9ef119c9381" />
+
 Это простое веб-приложение-калькулятор, написанное на языке Go с использованием стандартной библиотеки `net/http` и шаблонизатора `html/template`.
 
 ---
